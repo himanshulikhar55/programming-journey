@@ -1,0 +1,15 @@
+1) What is the difference between NULL and nullptr in C++?
+Ans: NULL evaluates to the integer '0' and can cause issue while overloading functions.
+     nullptr is of type std::nullptr_t and can be typecasted to any pointer type.
+Ref: https://stackoverflow.com/questions/20509734/null-vs-nullptr-why-was-it-replaced
+
+2) Consider the following scenario:
+int *mult(int a, int b){
+    //return the product of a and b
+}
+How will I return the pointer to the answer because as soon as the function is executed, the variables are destroyed?
+Ans: One way is to use the 'new' keyword. This will allocate a memory on heap and you can return a pointer to that.
+     Else we can use smart-pointers which have been provided since c++11. These smart pointers can be of type
+     std::unique_ptr, std::shared_ptr and std::weak_ptr.
+Ref: a) https://stackoverflow.com/questions/19042552/returning-a-pointer-of-a-local-variable-c
+     b) https://stackoverflow.com/questions/106508/what-is-a-smart-pointer-and-when-should-i-use-one
