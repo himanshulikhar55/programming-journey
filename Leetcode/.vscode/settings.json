@@ -1,0 +1,14 @@
+{
+    "files.associations": {
+        "*.bdy": "oracle",
+        "*.sql": "oracle",
+        "*.ddl": "oracle",
+        "*.dml": "oracle",
+        "*.pks": "oracle",
+        "*.pkb": "oracle",
+        "*.spc": "oracle",
+        "*.pck": "oracle",
+        "xstring": "cpp",
+        "vector": "cpp"
+    }
+}
