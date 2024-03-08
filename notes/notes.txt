@@ -13,3 +13,16 @@ Ans: One way is to use the 'new' keyword. This will allocate a memory on heap an
      std::unique_ptr, std::shared_ptr and std::weak_ptr.
 Ref: a) https://stackoverflow.com/questions/19042552/returning-a-pointer-of-a-local-variable-c
      b) https://stackoverflow.com/questions/106508/what-is-a-smart-pointer-and-when-should-i-use-one
+
+3) How to push changes regarding renaming of folder to git?
+Ans: So the renaming of folder from "Folder-1" to "new-folder-1" is fairly straightforward:
+     git mv Folder-1 new-folder-1
+     But if we are renaming the folder in such a way that only the case is being changed, it has to be done in 2
+     phases:
+     git mv Folder-1 tmp
+     git mv tmp folder-1
+
+     For a file it works in the straightforward way:
+     git mv mYfIlE myfile
+Ref: a) https://stackoverflow.com/questions/11183788/in-a-git-repository-how-to-properly-rename-a-directory
+     b) https://stackoverflow.com/questions/17683458/how-do-i-commit-case-sensitive-only-filename-changes-in-git/17688308#17688308

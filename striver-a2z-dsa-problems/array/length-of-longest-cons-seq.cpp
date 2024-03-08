@@ -1,6 +1,8 @@
 #include <bits/stdc++.h>
 using namespace std;
-
+// void printElements(int a){
+//     cout << a << ' ';
+// }
 int longestConsecutive(vector<int> &nums){
     int ans = INT_MIN, temp = 0;
     unordered_map<int,int> arr;
@@ -11,7 +13,7 @@ int longestConsecutive(vector<int> &nums){
         if(it->second == 0)
             continue;
         int num = it->first;
-        cout << num << ' ';
+        // cout << num << ' ';
         arr[num] = 0;
         --num;
         temp = 1;
@@ -40,10 +42,10 @@ int main(){
         cin >> temp;
         arr.push_back(temp);
     }
-    int longestConsSeqSize = longestConsecutive(arr);
-    
-    cout << "The length of longest consecutive sequence is: "        
-         << longestConsSeqSize << '\n';
+    int ans = longestConsecutive(arr);
+    cout << "The length of longest consecutive sequence is: " << ans << '\n';
+    // for_each(arr.begin(), arr.end(), printElements);
+    // cout << '\n';
     return 0;
 }
 //21 4 0 -4 -2 2 5 2 0 -8 -8 -8 -8 -1 7 4 5 5 -4 6 6 -3
