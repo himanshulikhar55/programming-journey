@@ -15,7 +15,7 @@ int findTarget(vector<int>& nums, int target, int lo, int hi){
         return lo;
     return -1;
 }
-int findMaxElePos(vector<int>& nums, int target){
+int findMaxElePos(vector<int>& nums){
     int len = nums.size()-1, lo = 0, hi = len, mid;
     while(lo<hi){
         mid=(lo+hi)/2;
@@ -31,15 +31,15 @@ int findMaxElePos(vector<int>& nums, int target){
 int search(vector<int>& nums, int target) {
     if(nums.size() == 0)
         return -1;
-    int ans = -1, maxElePos;
+    int ans = -1, maxElePos, len = nums.size()-1;
     //let us find the position about which it is rotated first
-    if(nums[0] <= nums[nums.size()-1]){
-        ans = findTarget(nums, target, 0, nums.size()-1);
+    if(nums[0] <= nums[len]){
+        ans = findTarget(nums, target, 0, len);
     }
     else{
-        maxElePos = findMaxElePos(nums, target);
+        maxElePos = findMaxElePos(nums);
         if(target < nums[0])
-            ans = findTarget(nums, target, maxElePos+1, nums.size()-1);
+            ans = findTarget(nums, target, maxElePos+1, len);
         else
             ans = findTarget(nums, target, 0, maxElePos);
     }
