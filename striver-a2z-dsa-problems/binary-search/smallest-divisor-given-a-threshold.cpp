@@ -12,8 +12,9 @@ int calcDivSum(vector<int> &nums, int divisor){
 }
 int smallestDivisor(vector<int>& nums, int threshold) {
     int len = nums.size(), lo = 1, hi = nums[0], mid, divSum;
-    for(int i : nums){
-        hi = max(i, hi);
+    for(int i=0;i<len;i++){
+        if(hi<nums[i])
+            hi = nums[i];
     }
     while(lo<hi){
         mid = (lo+hi)/2;
@@ -21,11 +22,9 @@ int smallestDivisor(vector<int>& nums, int threshold) {
         if(divSum > threshold)
             lo = mid+1;
         else
-            hi = mid-1;
+            hi = mid;
     }
-    if(calcDivSum(nums, lo) <= threshold)
-        return lo;
-    return lo+1;
+    return lo;
 }
 int main(){
     int n, k;
