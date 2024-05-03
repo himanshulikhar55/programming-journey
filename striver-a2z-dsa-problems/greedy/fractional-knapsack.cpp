@@ -21,14 +21,12 @@ using namespace std;
 void printPair(pair<int, int> p1){
     cout << p1.first << ' ' << p1.second << '\n';
 }
-bool compareWeightToVal(const pair<int, int> &p1, const pair<int, int> &p2) 
-{ 
+bool compareWeightToVal(const pair<int, int> &p1, const pair<int, int> &p2) {
     double wtToVal1 = ((double)p1.second)/p1.first;
     double wtToVal2 = ((double)p2.second)/p2.first;
     return wtToVal1 > wtToVal2; 
 }
-double maximumValue (vector<pair<int, int>>& items, int n, int w)
-{
+double maximumValue (vector<pair<int, int>>& items, int n, int w) {
     // ITEMS contains {weight, value} pairs.
     sort(items.begin(), items.end(), compareWeightToVal);
     for_each(items.begin(), items.end(), printPair);
