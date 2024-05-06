@@ -12,6 +12,8 @@ using namespace std;
     0 <= nums[i] <= 10^5
 */
 bool canJump(vector<int>& nums) {
+    if(nums.size() < 2)
+        return true;
     int distToJump=1, len = nums.size();
     for(int i=len-2; i>=0; i--){
         if(nums[i] >= distToJump){
