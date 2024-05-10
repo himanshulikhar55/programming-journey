@@ -1,5 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
+//works only when all elements are > 0
 int lenOfLongSubarr(int arr[],  int n, int k) { 
     int start = 0, end = 0, maxLen = 0, currSum = 0;
     while(end < n){
