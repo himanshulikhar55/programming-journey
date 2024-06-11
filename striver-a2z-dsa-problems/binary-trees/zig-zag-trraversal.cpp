@@ -14,7 +14,7 @@ vector<vector<int>> zigzagLevelOrder(TreeNode* root) {
     vector<vector<int>> zigZagTraversal;
     queue<TreeNode*> nodes;
     nodes.push(root);
-    //tells how we are traversing the  level
+    //tells how we are traversing the current level
     bool leftToRight = true;
     TreeNode *temp;
     int len = 1;
