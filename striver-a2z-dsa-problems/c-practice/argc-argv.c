@@ -8,6 +8,7 @@
 
     https://stackoverflow.com/questions/3024197/what-does-int-argc-char-argv-mean
 */
+//char *argv[] == char **argv
 int main(int argc, char *argv[]){
     for(int i=0; i<argc; i++)
         printf("%s\n", argv[i]);
