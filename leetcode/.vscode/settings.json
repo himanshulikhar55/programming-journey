@@ -9,6 +9,7 @@
         "*.spc": "oracle",
         "*.pck": "oracle",
         "xstring": "cpp",
-        "vector": "cpp"
+        "vector": "cpp",
+        "iostream": "cpp"
     }
 }
